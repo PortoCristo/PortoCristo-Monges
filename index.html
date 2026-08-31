@@ -1,42 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
 
-<head><!DOCTYPE html>
-<html lang="de">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Ferienwohnung & Zimmervermietung in Porto Cristo | Mallorca</title>
-
-<meta name="description" content="Ferienwohnung und Zimmervermietung in Porto Cristo auf Mallorca. Einzelzimmer ab 50 €, Doppelzimmer mit eigenem Bad 120 € oder komplette Ferienwohnung für bis zu 4 Personen für 190 € pro Nacht.">
-
-</head>
-
-<body style="
-    font-family: Arial, sans-serif;
-    margin:0;
-    padding:0;
-    color:#222;
-    line-height:1.6;
-    background:#f6f1e7;
-">
-
-<!-- =========================
-     HEADER
-========================= -->
-
-<div class="hero" style="
-    background:url('images/titelbild.jpg') center/cover no-repeat;
-    height:80vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:white;
-    position:relative;
-">
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,115 +10,827 @@
 
 <meta name="description" content="Ferienwohnung und Zimmervermietung in Porto Cristo auf Mallorca. Einzelzimmer ab 50 €, Doppelzimmer mit eigenem Bad 120 € oder komplette Ferienwohnung für bis zu 4 Personen für 190 € pro Nacht.">
 
+<style>
+
+/* =========================
+   GRUNDLAYOUT
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #222;
+    line-height: 1.6;
+    background: #f6f1e7;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1,
+h2,
+h3 {
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    letter-spacing: 0.3px;
+}
+
+h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   ALLGEMEINE BOXEN
+========================= */
+
+.content-box {
+    padding: 60px 40px;
+    max-width: 1000px;
+    margin: 40px auto;
+    background: #fffdf7;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    background: url('images/titelbild.jpg') center/cover no-repeat;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.4);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    max-width: 900px;
+}
+
+.hero-content p {
+    margin-top: 10px;
+}
+
+.hero-main-text {
+    font-size: 20px;
+}
+
+.hero-sub-text {
+    font-size: 17px;
+}
+
+.language-links {
+    margin-top: 15px;
+}
+
+.language-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+
+/* =========================
+   WILLKOMMEN
+========================= */
+
+.welcome-text {
+    font-size: 17px;
+    color: #444;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+}
+
+.welcome-text:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   BILDERGALERIE
+========================= */
+
+.bilder-box {
+    padding: 40px;
+    max-width: 1100px;
+    margin: 40px auto;
+    background: #fffdf7;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.bilder-box h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.bilder-galerie {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.bilder-galerie img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+/* =========================
+   MIETOPTIONEN
+========================= */
+
+.mietoptionen-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.mietkarte {
+    background: #fffaf2;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.mietkarte-gruen {
+    background: #eef5ef;
+    border: 1px solid #dce9dd;
+}
+
+.mietkarte h3 {
+    margin-top: 0;
+    font-size: 21px;
+}
+
+.mietkarte p {
+    color: #666;
+}
+
+.preis {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #222 !important;
+}
+
+.preis-info {
+    margin: 0 !important;
+    color: #777 !important;
+}
+
+.mindestaufenthalt {
+    margin-top: 30px;
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================
+   AUSSTATTUNG
+========================= */
+
+.ausstattung-grid {
+    max-width: 800px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    text-align: left;
+}
+
+
+/* =========================
+   HIGHLIGHTS
+========================= */
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.highlight-card {
+    background: #fffaf2;
+    padding: 28px;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.highlight-card h3 {
+    margin-top: 0;
+}
+
+.highlight-card p {
+    color: #555;
+}
+
+
+/* =========================
+   LAGE
+========================= */
+
+.lage-box {
+    padding: 60px;
+    max-width: 1000px;
+    margin: 50px auto;
+    background: #fffdf7;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    text-align: center;
+}
+
+.lage-text {
+    font-size: 18px;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+}
+
+.lage-liste {
+    margin-top: 30px;
+    text-align: left;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 2;
+}
+
+
+/* =========================
+   PORTO CRISTO BILDER
+========================= */
+
+.umgebung-box {
+    padding: 60px 40px;
+    max-width: 1100px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.umgebung-text {
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+}
+
+.umgebung-galerie {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.umgebung-galerie img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+/* =========================
+   GOOGLE MAPS
+========================= */
+
+.maps-box {
+    padding: 40px;
+    max-width: 1000px;
+    margin: 40px auto;
+    background: #fffdf7;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    text-align: center;
+}
+
+.maps-box p {
+    color: #666;
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+.maps-box iframe {
+    width: 100%;
+    height: 350px;
+    border: 0;
+    border-radius: 14px;
+    display: block;
+}
+
+
+/* =========================
+   VERFÜGBARKEIT
+========================= */
+
+.verfuegbarkeit-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    max-width: 850px;
+    margin: 30px auto;
+}
+
+.preis-box {
+    background: #fffaf2;
+    padding: 25px;
+    border-radius: 14px;
+}
+
+.preis-box-gruen {
+    background: #eef5ef;
+    border: 1px solid #dce9dd;
+}
+
+.preis-box h3 {
+    margin-top: 0;
+}
+
+.preis-box .preis {
+    font-size: 24px;
+    margin: 5px 0;
+}
+
+.preis-box .preis-info {
+    color: #666;
+    margin: 0;
+}
+
+.verfuegbarkeit-hinweis {
+    margin-top: 25px;
+    padding: 20px;
+    background: #f8f8f8;
+    border-radius: 10px;
+}
+
+
+/* =========================
+   WARUM DIESE UNTERKUNFT
+========================= */
+
+.warum-box {
+    padding: 70px 40px;
+    max-width: 1000px;
+    margin: 40px auto;
+    background: #f8f8f8;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    text-align: center;
+}
+
+.warum-einleitung {
+    max-width: 750px;
+    margin: 0 auto 40px auto;
+    font-size: 18px;
+    color: #555;
+    line-height: 1.8;
+}
+
+.warum-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.warum-card {
+    background: white;
+    padding: 28px;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.warum-card h3 {
+    margin-top: 0;
+}
+
+.warum-card p {
+    color: #555;
+}
+
+.warum-ziel {
+    max-width: 700px;
+    margin: 40px auto 0 auto;
+    font-size: 17px;
+    color: #555;
+}
+
+
+/* =========================
+   KONTAKT
+========================= */
+
+.kontakt {
+    background: #1e1e1e;
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.kontakt h2 {
+    margin-bottom: 20px;
+}
+
+.kontakt-email {
+    opacity: 0.8;
+    font-size: 14px;
+}
+
+
+/* =========================
+   WHATSAPP BUTTON
+========================= */
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 14px 18px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    animation: pulse 2.5s infinite;
+}
+
+.whatsapp-button small {
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes pulse {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .mietoptionen-grid,
+    .verfuegbarkeit-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bilder-galerie,
+    .umgebung-galerie {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .hero {
+        min-height: 65vh;
+        height: auto;
+    }
+
+    .hero-content {
+        padding: 25px 18px;
+    }
+
+    h1 {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    h2 {
+        font-size: 22px;
+        line-height: 1.3;
+        margin-bottom: 15px;
+    }
+
+    h3 {
+        font-size: 17px;
+        line-height: 1.3;
+    }
+
+    .hero-main-text {
+        font-size: 16px;
+    }
+
+    .hero-sub-text {
+        font-size: 15px;
+    }
+
+    .content-box {
+        padding: 35px 20px;
+        margin: 25px 12px;
+        border-radius: 14px;
+    }
+
+    .welcome-text {
+        font-size: 16px;
+    }
+
+
+    /* Bilder direkt nach Willkommen */
+
+    .bilder-box {
+        padding: 30px 15px;
+        margin: 25px 12px;
+    }
+
+    .bilder-galerie {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .bilder-galerie img {
+        aspect-ratio: 4 / 3;
+    }
+
+
+    /* Mietoptionen */
+
+    .mietoptionen-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mietkarte {
+        padding: 25px;
+    }
+
+
+    /* Ausstattung */
+
+    .ausstattung-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Highlights */
+
+    .highlights-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Lage */
+
+    .lage-box {
+        padding: 35px 20px;
+        margin: 25px 12px;
+    }
+
+    .lage-text {
+        font-size: 16px;
+    }
+
+    .lage-liste {
+        line-height: 1.8;
+    }
+
+
+    /* Umgebung */
+
+    .umgebung-box {
+        padding: 35px 15px;
+        margin: 25px 12px;
+    }
+
+    .umgebung-galerie {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Karte */
+
+    .maps-box {
+        padding: 30px 15px;
+        margin: 25px 12px;
+    }
+
+    .maps-box iframe {
+        height: 300px;
+    }
+
+
+    /* Verfügbarkeit */
+
+    .verfuegbarkeit-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Warum */
+
+    .warum-box {
+        padding: 40px 20px;
+        margin: 25px 12px;
+    }
+
+    .warum-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Kontakt */
+
+    .kontakt {
+        padding: 35px 20px;
+    }
+
+
+    /* WhatsApp */
+
+    .whatsapp-button {
+        right: 12px;
+        bottom: 12px;
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+
+    .whatsapp-button small {
+        display: none;
+    }
+
+}
+
+
+/* =========================
+   SEHR KLEINE HANDYS
+========================= */
+
+@media (max-width: 400px) {
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .hero-content {
+        padding: 20px 15px;
+    }
+
+    .content-box {
+        padding: 30px 16px;
+    }
+
+    .bilder-box {
+        padding: 25px 12px;
+    }
+
+    .whatsapp-button {
+        padding: 12px 14px;
+        font-size: 13px;
+    }
+
+}
+
+</style>
+
 </head>
 
-<body style="
-    font-family: Arial, sans-serif;
-    margin:0;
-    padding:0;
-    color:#222;
-    line-height:1.6;
-    background:#f6f1e7;
-">
+
+<body>
+
 
 <!-- =========================
      HEADER
 ========================= -->
 
-<div class="hero" style="
-    background:url('images/titelbild.jpg') center/cover no-repeat;
-    height:80vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:white;
-    position:relative;
-">
+<header class="hero">
 
-    <div style="
-        position:absolute;
-        top:0;
-        left:0;
-        right:0;
-        bottom:0;
-        background:rgba(0,0,0,0.4);
-    "></div>
+    <div class="hero-overlay"></div>
 
-    <div style="position:relative; z-index:2; padding:20px;">
+    <div class="hero-content">
 
-        <h1 style="
-            margin:0;
-            font-size:48px;
-        ">
+        <h1>
             Ferienwohnung Monges
         </h1>
 
-        <p style="
-            font-size:20px;
-            margin-top:10px;
-        ">
+        <p class="hero-main-text">
             Porto Cristo · Mallorca · Nur 3 Minuten zum Strand
         </p>
 
-        <p style="
-            font-size:17px;
-            margin-top:10px;
-        ">
+        <p class="hero-sub-text">
             Ferienwohnung für bis zu 4 Personen · Zimmervermietung möglich
         </p>
 
-        <div style="margin-top:15px;">
+        <nav class="language-links">
 
-            <a href="index.html"
-               style="color:white; margin:0 10px;">
+            <a href="index.html">
                 DE
             </a>
 
-            <a href="en.html"
-               style="color:white; margin:0 10px;">
+            <a href="en.html">
                 EN
             </a>
 
-            <a href="fr.html"
-               style="color:white; margin:0 10px;">
+            <a href="fr.html">
                 FR
             </a>
 
-        </div>
+        </nav>
 
     </div>
 
-</div>
+</header>
 
 
 <!-- =========================
      WILLKOMMEN
 ========================= -->
 
-<div style="
-    padding:60px 40px;
-    max-width:1000px;
-    margin:40px auto;
-    background:#fffdf7;
-    border-radius:16px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.06);
-">
+<section class="content-box">
 
-    <h2 style="
-        text-align:center;
-        font-size:28px;
-        margin-bottom:25px;
-    ">
+    <h2 class="text-center">
         Herzlich Willkommen
     </h2>
 
-    <p style="
-        font-size:17px;
-        color:#444;
-        max-width:800px;
-        margin:0 auto 20px auto;
-    ">
+    <p class="welcome-text">
         Willkommen in unserer hellen und stilvoll eingerichteten
         Ferienwohnung im Herzen von Porto Cristo. Die Wohnung befindet
         sich im ersten Stock eines gepflegten Zweifamilienhauses in
@@ -161,161 +838,125 @@
         mit einer angenehmen und entspannten Wohnatmosphäre.
     </p>
 
-    <p style="
-        font-size:17px;
-        color:#444;
-        max-width:800px;
-        margin:0 auto 20px auto;
-    ">
+    <p class="welcome-text">
         Der feinsandige Strand, der malerische Fischerhafen,
         Restaurants, Cafés und Einkaufsmöglichkeiten sind in nur
         wenigen Gehminuten erreichbar. Direkt vor dem Haus stehen
         in der Regel ausreichend öffentliche Parkplätze zur Verfügung.
     </p>
 
-    <p style="
-        font-size:17px;
-        color:#444;
-        max-width:800px;
-        margin:0 auto 20px auto;
-    ">
+    <p class="welcome-text">
         Die großzügige Wohnung verfügt über zwei Schlafzimmer,
         zwei moderne Badezimmer – eines davon en suite – sowie
         ein helles und gemütliches Wohnzimmer.
     </p>
 
-    <p style="
-        font-size:17px;
-        color:#444;
-        max-width:800px;
-        margin:0 auto 20px auto;
-    ">
+    <p class="welcome-text">
         Die separate Küche ist vollständig ausgestattet.
         Zusätzlich steht ein Hauswirtschaftsraum mit Waschmaschine
         zur Verfügung.
     </p>
 
-    <p style="
-        font-size:17px;
-        color:#444;
-        max-width:800px;
-        margin:0 auto 20px auto;
-    ">
+    <p class="welcome-text">
         Ein besonderes Highlight ist die große private Sonnenterrasse.
         Ergänzt wird der Außenbereich durch einen Balkon mit Sitzecke.
     </p>
 
-    <p style="
-        font-size:17px;
-        color:#444;
-        max-width:800px;
-        margin:0 auto;
-    ">
+    <p class="welcome-text">
         Mehrere Klimaanlagen mit Kühl- und Heizfunktion sorgen
         ganzjährig für angenehme Temperaturen. Große Einbauschränke
         bieten viel Stauraum. Die Wohnung eignet sich ideal für bis
         zu vier Personen und auf Anfrage auch für ein kleines Haustier.
     </p>
 
-</div>
+</section>
 
-    <h2 style="
-    text-align:center;
-    font-size:28px;
-    margin:0 0 25px 0;
-">
 
-        <!-- =========================
+<!-- =========================
      BILDER
-        ========================= -->
+     DIREKT NACH WILLKOMMEN
+========================= -->
 
-        
+<section class="bilder-box">
+
+    <h2>
         Bilder
-</h2>
+    </h2>
 
-<div class="bilder-galerie">
+    <div class="bilder-galerie">
 
-    <img src="images/terrasse1.jpg"
-         alt="Private Sonnenterrasse"
-         loading="lazy">
+        <img src="images/terrasse1.jpg"
+             alt="Private Sonnenterrasse"
+             loading="lazy">
 
-    <img src="images/salon2.jpg"
-         alt="Wohnzimmer"
-         loading="lazy">
+        <img src="images/salon2.jpg"
+             alt="Wohnzimmer"
+             loading="lazy">
 
-    <img src="images/salon1.jpg"
-         alt="Wohnzimmer"
-         loading="lazy">
+        <img src="images/salon1.jpg"
+             alt="Wohnzimmer"
+             loading="lazy">
 
-    <img src="images/cocina.jpg"
-         alt="Küche"
-         loading="lazy">
+        <img src="images/cocina.jpg"
+             alt="Küche"
+             loading="lazy">
 
-    <img src="images/cocina2.jpg"
-         alt="Küche"
-         loading="lazy">
+        <img src="images/cocina2.jpg"
+             alt="Küche"
+             loading="lazy">
 
-    <img src="images/cuarto2a.jpg"
-         alt="Schlafzimmer"
-         loading="lazy">
+        <img src="images/cuarto2a.jpg"
+             alt="Schlafzimmer"
+             loading="lazy">
 
-    <img src="images/cuarto2b.jpg"
-         alt="Schlafzimmer"
-         loading="lazy">
+        <img src="images/cuarto2b.jpg"
+             alt="Schlafzimmer"
+             loading="lazy">
 
-    <img src="images/cuarto1b.jpg"
-         alt="Schlafzimmer"
-         loading="lazy">
+        <img src="images/cuarto1b.jpg"
+             alt="Schlafzimmer"
+             loading="lazy">
 
-    <img src="images/cuarto1a.jpg"
-         alt="Schlafzimmer"
-         loading="lazy">
+        <img src="images/cuarto1a.jpg"
+             alt="Schlafzimmer"
+             loading="lazy">
 
-    <img src="images/bano1.jpg"
-         alt="Badezimmer"
-         loading="lazy">
+        <img src="images/bano1.jpg"
+             alt="Badezimmer"
+             loading="lazy">
 
-    <img src="images/bano1b.jpg"
-         alt="Badezimmer"
-         loading="lazy">
+        <img src="images/bano1b.jpg"
+             alt="Badezimmer"
+             loading="lazy">
 
-    <img src="images/bano2b.jpg"
-         alt="Badezimmer"
-         loading="lazy">
+        <img src="images/bano2b.jpg"
+             alt="Badezimmer"
+             loading="lazy">
 
-    <img src="images/bano2.jpg"
-         alt="Badezimmer"
-         loading="lazy">
+        <img src="images/bano2.jpg"
+             alt="Badezimmer"
+             loading="lazy">
 
-    <img src="images/balcon.jpg"
-         alt="Balkon"
-         loading="lazy">
+        <img src="images/balcon.jpg"
+             alt="Balkon"
+             loading="lazy">
 
-    <img src="images/vogelperspektive.jpg"
-         alt="Porto Cristo aus der Vogelperspektive"
-         loading="lazy">
+        <img src="images/vogelperspektive.jpg"
+             alt="Porto Cristo aus der Vogelperspektive"
+             loading="lazy">
 
-</div>
+    </div>
+
+</section>
 
 
 <!-- =========================
      ZIMMERVERMIETUNG / MIETOPTIONEN
 ========================= -->
 
-<div style="
-    padding:60px 40px;
-    max-width:1000px;
-    margin:40px auto;
-    background:#fffdf7;
-    border-radius:16px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.06);
-    text-align:center;
-">
+<section class="content-box text-center">
 
-    <h2 style="
-        font-size:28px;
-        margin-bottom:15px;
-    ">
+    <h2>
         🏡 Deine Mietoptionen
     </h2>
 
@@ -331,54 +972,28 @@
     </p>
 
 
-    <div style="
-        display:grid;
-        grid-template-columns:repeat(3, 1fr);
-        gap:20px;
-        max-width:900px;
-        margin:0 auto;
-        text-align:left;
-    ">
+    <div class="mietoptionen-grid">
 
 
         <!-- EINZELZIMMER -->
 
-        <div style="
-            background:#fffaf2;
-            padding:30px;
-            border-radius:16px;
-            box-shadow:0 4px 15px rgba(0,0,0,0.05);
-            box-sizing:border-box;
-        ">
+        <div class="mietkarte">
 
-            <h3 style="
-                margin-top:0;
-                font-size:21px;
-            ">
+            <h3>
                 🛏️ Einzelzimmer
             </h3>
 
-            <p style="
-                color:#666;
-                min-height:80px;
-            ">
+            <p>
                 Gemütliches Einzelzimmer für Alleinreisende
                 oder Gäste, die eine flexible Unterkunft
                 in Porto Cristo suchen.
             </p>
 
-            <div style="
-                font-size:30px;
-                font-weight:bold;
-                margin-top:15px;
-            ">
+            <div class="preis">
                 50 €
             </div>
 
-            <p style="
-                margin:0;
-                color:#777;
-            ">
+            <p class="preis-info">
                 pro Nacht
             </p>
 
@@ -387,41 +1002,22 @@
 
         <!-- DOPPELZIMMER -->
 
-        <div style="
-            background:#fffaf2;
-            padding:30px;
-            border-radius:16px;
-            box-shadow:0 4px 15px rgba(0,0,0,0.05);
-            box-sizing:border-box;
-        ">
+        <div class="mietkarte">
 
-            <h3 style="
-                margin-top:0;
-                font-size:21px;
-            ">
+            <h3>
                 🛏️ Doppelzimmer
             </h3>
 
-            <p style="
-                color:#666;
-                min-height:80px;
-            ">
+            <p>
                 Komfortables Doppelbettzimmer mit
                 eigenem Badezimmer en suite.
             </p>
 
-            <div style="
-                font-size:30px;
-                font-weight:bold;
-                margin-top:15px;
-            ">
+            <div class="preis">
                 120 €
             </div>
 
-            <p style="
-                margin:0;
-                color:#777;
-            ">
+            <p class="preis-info">
                 pro Nacht
             </p>
 
@@ -430,42 +1026,22 @@
 
         <!-- KOMPLETTE WOHNUNG -->
 
-        <div style="
-            background:#eef5ef;
-            padding:30px;
-            border-radius:16px;
-            box-shadow:0 4px 15px rgba(0,0,0,0.05);
-            border:1px solid #dce9dd;
-            box-sizing:border-box;
-        ">
+        <div class="mietkarte mietkarte-gruen">
 
-            <h3 style="
-                margin-top:0;
-                font-size:21px;
-            ">
+            <h3>
                 🏡 Komplette Ferienwohnung
             </h3>
 
-            <p style="
-                color:#666;
-                min-height:80px;
-            ">
+            <p>
                 Exklusive Nutzung der gesamten Wohnung
                 für bis zu 4 Personen.
             </p>
 
-            <div style="
-                font-size:30px;
-                font-weight:bold;
-                margin-top:15px;
-            ">
+            <div class="preis">
                 190 €
             </div>
 
-            <p style="
-                margin:0;
-                color:#777;
-            ">
+            <p class="preis-info">
                 pro Nacht
             </p>
 
@@ -474,17 +1050,11 @@
     </div>
 
 
-    <div style="
-        margin-top:30px;
-        background:#f8f8f8;
-        padding:20px;
-        border-radius:12px;
-        max-width:700px;
-        margin-left:auto;
-        margin-right:auto;
-    ">
+    <div class="mindestaufenthalt">
 
-        <strong>Mindestaufenthalt: 3 Nächte</strong>
+        <strong>
+            Mindestaufenthalt: 3 Nächte
+        </strong>
 
         <p style="
             margin:8px 0 0 0;
@@ -495,27 +1065,16 @@
 
     </div>
 
-</div>
+</section>
 
 
 <!-- =========================
      AUSSTATTUNG
 ========================= -->
 
-<div style="
-    padding:60px 40px;
-    max-width:1000px;
-    margin:40px auto;
-    background:#fffdf7;
-    border-radius:16px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.06);
-    text-align:center;
-">
+<section class="content-box text-center">
 
-    <h2 style="
-        font-size:28px;
-        margin-bottom:15px;
-    ">
+    <h2>
         Ausstattung
     </h2>
 
@@ -529,14 +1088,7 @@
         Aufenthalt in Porto Cristo.
     </p>
 
-    <div style="
-        max-width:800px;
-        margin:auto;
-        display:grid;
-        grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
-        gap:15px;
-        text-align:left;
-    ">
+    <div class="ausstattung-grid">
 
         <div>✔ Mehrere Klimaanlagen (warm/kalt)</div>
         <div>✔ Kostenloses WLAN</div>
@@ -556,27 +1108,16 @@
 
     </div>
 
-</div>
+</section>
 
 
 <!-- =========================
      HIGHLIGHTS
 ========================= -->
 
-<div style="
-    padding:60px 40px;
-    max-width:1000px;
-    margin:40px auto;
-    background:#fffdf7;
-    border-radius:16px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.06);
-    text-align:center;
-">
+<section class="content-box text-center">
 
-    <h2 style="
-        font-size:28px;
-        margin-bottom:15px;
-    ">
+    <h2>
         Highlights
     </h2>
 
@@ -590,41 +1131,29 @@
         in Porto Cristo.
     </p>
 
-    <div style="
-        display:grid;
-        grid-template-columns:repeat(2, 1fr);
-        gap:20px;
-        max-width:850px;
-        margin:0 auto;
-        text-align:left;
-    ">
+    <div class="highlights-grid">
 
-        <div style="
-            background:#fffaf2;
-            padding:28px;
-            border-radius:14px;
-            box-shadow:0 4px 15px rgba(0,0,0,0.05);
-        ">
 
-            <h3>🏖️ Strandnähe</h3>
+        <div class="highlight-card">
 
-            <p style="color:#555;">
+            <h3>
+                🏖️ Strandnähe
+            </h3>
+
+            <p>
                 Nur etwa 3 Minuten zu Fuß zum Strand.
             </p>
 
         </div>
 
 
-        <div style="
-            background:#fffaf2;
-            padding:28px;
-            border-radius:14px;
-            box-shadow:0 4px 15px rgba(0,0,0,0.05);
-        ">
+        <div class="highlight-card">
 
-            <h3>📍 Zentrale Lage</h3>
+            <h3>
+                📍 Zentrale Lage
+            </h3>
 
-            <p style="color:#555;">
+            <p>
                 Porto Cristo Zentrum mit Hafen,
                 Restaurants und Einkaufsmöglichkeiten
                 bequem zu Fuß erreichbar.
@@ -633,16 +1162,13 @@
         </div>
 
 
-        <div style="
-            background:#fffaf2;
-            padding:28px;
-            border-radius:14px;
-            box-shadow:0 4px 15px rgba(0,0,0,0.05);
-        ">
+        <div class="highlight-card">
 
-            <h3>☀️ Private Sonnenterrasse</h3>
+            <h3>
+                ☀️ Private Sonnenterrasse
+            </h3>
 
-            <p style="color:#555;">
+            <p>
                 Viel Platz zum Entspannen, Sonnenbaden
                 und für gemütliche Abende.
             </p>
@@ -650,16 +1176,13 @@
         </div>
 
 
-        <div style="
-            background:#fffaf2;
-            padding:28px;
-            border-radius:14px;
-            box-shadow:0 4px 15px rgba(0,0,0,0.05);
-        ">
+        <div class="highlight-card">
 
-            <h3>🏡 Großzügiges Wohnen</h3>
+            <h3>
+                🏡 Großzügiges Wohnen
+            </h3>
 
-            <p style="color:#555;">
+            <p>
                 Zwei Schlafzimmer, zwei Badezimmer
                 und viel Platz für bis zu vier Personen.
             </p>
@@ -668,52 +1191,26 @@
 
     </div>
 
-</div>
-
-
-</div>
+</section>
 
 
 <!-- =========================
      LAGE & UMGEBUNG
 ========================= -->
 
-<div style="
-    padding:60px;
-    max-width:1000px;
-    margin:50px auto;
-    background:#fffdf7;
-    border-radius:16px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.06);
-    text-align:center;
-">
+<section class="lage-box">
 
-    <h2 style="
-        font-size:28px;
-        margin-bottom:20px;
-    ">
+    <h2>
         📍 Lage & Umgebung
     </h2>
 
-    <p style="
-        font-size:18px;
-        color:#555;
-        max-width:700px;
-        margin:0 auto 30px auto;
-    ">
+    <p class="lage-text">
         Unsere Ferienwohnung liegt im Herzen von Porto Cristo –
         nur wenige Gehminuten vom Strand, Hafen, Restaurants
         und Einkaufsmöglichkeiten entfernt.
     </p>
 
-    <div style="
-        margin-top:30px;
-        text-align:left;
-        max-width:700px;
-        margin-left:auto;
-        margin-right:auto;
-        line-height:2;
-    ">
+    <div class="lage-liste">
 
         <p>
             🏖️ Nur <strong>3 Gehminuten zum Strand</strong>
@@ -744,154 +1241,98 @@
 
     </div>
 
-</div>
+</section>
 
 
 <!-- =========================
      PORTO CRISTO BILDER
 ========================= -->
 
-<div style="
-    padding:60px 40px;
-    max-width:1100px;
-    margin:40px auto;
-    text-align:center;
-">
+<section class="umgebung-box">
 
-    <h2 style="
-        font-size:28px;
-        margin-bottom:20px;
-    ">
+    <h2>
         🌴 Porto Cristo & Umgebung
     </h2>
 
-    <p style="
-        color:#666;
-        max-width:700px;
-        margin:0 auto 30px auto;
-    ">
+    <p class="umgebung-text">
         Entdecke den Charme von Porto Cristo – Strand, Hafen,
         Promenade und die wunderschöne Ostküste Mallorcas.
     </p>
 
-    <div style="
-        display:grid;
-        grid-template-columns:repeat(3, 1fr);
-        gap:10px;
-    ">
+    <div class="umgebung-galerie">
 
         <img src="images/puerto.jpg"
              alt="Strand von Porto Cristo"
-             loading="lazy"
-             style="width:100%; border-radius:10px;">
+             loading="lazy">
 
         <img src="images/cuevablancavista.jpg"
              alt="Cueva Blanca"
-             loading="lazy"
-             style="width:100%; border-radius:10px;">
+             loading="lazy">
 
         <img src="images/strand.jpg"
              alt="Strand"
-             loading="lazy"
-             style="width:100%; border-radius:10px;">
+             loading="lazy">
 
         <img src="images/PC-playa.jpg"
              alt="Playa Porto Cristo"
-             loading="lazy"
-             style="width:100%; border-radius:10px;">
+             loading="lazy">
 
         <img src="images/PC-barcos2.jpg"
              alt="Hafen Porto Cristo"
-             loading="lazy"
-             style="width:100%; border-radius:10px;">
+             loading="lazy">
 
         <img src="images/PC-puerto_desde_puerto_drach.jpg"
              alt="Porto Cristo"
-             loading="lazy"
-             style="width:100%; border-radius:10px;">
+             loading="lazy">
 
         <img src="images/hafennacht.jpg"
              alt="Hafen bei Nacht"
-             loading="lazy"
-             style="width:100%; border-radius:10px;">
+             loading="lazy">
 
         <img src="images/cuevas.jpg"
              alt="Cuevas del Drach"
-             loading="lazy"
-             style="width:100%; border-radius:10px;">
+             loading="lazy">
 
         <img src="images/calapetite.jpg"
              alt="Cala Petite"
-             loading="lazy"
-             style="width:100%; border-radius:10px;">
+             loading="lazy">
 
     </div>
 
-</div>
+</section>
 
 
 <!-- =========================
      GOOGLE MAPS
 ========================= -->
 
-<div style="
-    padding:40px;
-    max-width:1000px;
-    margin:40px auto;
-    background:#fffdf7;
-    border-radius:16px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.06);
-    text-align:center;
-">
+<section class="maps-box">
 
-    <h2 style="
-        font-size:28px;
-        margin-bottom:10px;
-    ">
+    <h2>
         📍 Hier findest du uns
     </h2>
 
-    <p style="
-        color:#666;
-        font-size:17px;
-        margin-bottom:25px;
-    ">
+    <p>
         Porto Cristo · Mallorca
     </p>
 
     <iframe
         src="https://www.google.com/maps?q=Porto+Cristo+Mallorca&output=embed"
-        width="100%"
-        height="350"
-        style="
-            border:0;
-            border-radius:14px;
-            display:block;
-        "
+        title="Karte von Porto Cristo Mallorca"
+        loading="lazy"
         allowfullscreen>
     </iframe>
 
-</div>
+</section>
 
 
 <!-- =========================
      VERFÜGBARKEIT
 ========================= -->
 
-<div style="
-    padding:60px 40px;
-    max-width:1000px;
-    margin:40px auto;
-    background:#fffdf7;
-    border-radius:16px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.06);
-    text-align:center;
-">
+<section class="content-box text-center">
 
-    <h2 style="
-        font-size:28px;
-        margin-bottom:15px;
-    ">
+    <h2>
         📅 Verfügbarkeit & Anfrage
     </h2>
 
@@ -909,87 +1350,54 @@
     </p>
 
 
-    <div style="
-        display:grid;
-        grid-template-columns:repeat(3, 1fr);
-        gap:15px;
-        max-width:850px;
-        margin:30px auto;
-    ">
+    <div class="verfuegbarkeit-grid">
 
-        <div style="
-            background:#fffaf2;
-            padding:25px;
-            border-radius:14px;
-        ">
 
-            <h3>🛏️ Einzelzimmer</h3>
+        <div class="preis-box">
 
-            <p style="
-                font-size:24px;
-                font-weight:bold;
-                margin:5px 0;
-            ">
+            <h3>
+                🛏️ Einzelzimmer
+            </h3>
+
+            <p class="preis">
                 50 €
             </p>
 
-            <p style="
-                color:#666;
-                margin:0;
-            ">
+            <p class="preis-info">
                 pro Nacht
             </p>
 
         </div>
 
 
-        <div style="
-            background:#fffaf2;
-            padding:25px;
-            border-radius:14px;
-        ">
+        <div class="preis-box">
 
-            <h3>🛏️ Doppelzimmer</h3>
+            <h3>
+                🛏️ Doppelzimmer
+            </h3>
 
-            <p style="
-                font-size:24px;
-                font-weight:bold;
-                margin:5px 0;
-            ">
+            <p class="preis">
                 120 €
             </p>
 
-            <p style="
-                color:#666;
-                margin:0;
-            ">
+            <p class="preis-info">
                 pro Nacht · Bad en suite
             </p>
 
         </div>
 
 
-        <div style="
-            background:#eef5ef;
-            padding:25px;
-            border-radius:14px;
-            border:1px solid #dce9dd;
-        ">
+        <div class="preis-box preis-box-gruen">
 
-            <h3>🏡 Ganze Wohnung</h3>
+            <h3>
+                🏡 Ganze Wohnung
+            </h3>
 
-            <p style="
-                font-size:24px;
-                font-weight:bold;
-                margin:5px 0;
-            ">
+            <p class="preis">
                 190 €
             </p>
 
-            <p style="
-                color:#666;
-                margin:0;
-            ">
+            <p class="preis-info">
                 pro Nacht · bis 4 Personen
             </p>
 
@@ -998,12 +1406,7 @@
     </div>
 
 
-    <div style="
-        margin-top:25px;
-        padding:20px;
-        background:#f8f8f8;
-        border-radius:10px;
-    ">
+    <div class="verfuegbarkeit-hinweis">
 
         <p>
             ✔ Mindestaufenthalt: 3 Nächte
@@ -1024,65 +1427,36 @@
 
     </div>
 
-</div>
+</section>
 
 
 <!-- =========================
      WARUM DIESE UNTERKUNFT
 ========================= -->
 
-<div style="
-    padding:70px 40px;
-    max-width:1000px;
-    margin:40px auto;
-    background:#f8f8f8;
-    border-radius:16px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.04);
-    text-align:center;
-">
+<section class="warum-box">
 
-    <h2 style="
-        font-size:28px;
-        margin-bottom:15px;
-    ">
+    <h2>
         ✨ Warum diese Unterkunft?
     </h2>
 
-    <p style="
-        max-width:750px;
-        margin:0 auto 40px auto;
-        font-size:18px;
-        color:#555;
-        line-height:1.8;
-    ">
+    <p class="warum-einleitung">
         Ob alleine, zu zweit oder mit der ganzen Familie:
         Hier findest du eine flexible Unterkunft in Porto Cristo
         mit viel Platz, Komfort und einer hervorragenden Lage.
     </p>
 
 
-    <div style="
-        display:grid;
-        grid-template-columns:repeat(2, 1fr);
-        gap:20px;
-        max-width:850px;
-        margin:0 auto;
-        text-align:left;
-    ">
+    <div class="warum-grid">
 
 
-        <div style="
-            background:white;
-            padding:28px;
-            border-radius:14px;
-            box-shadow:0 4px 15px rgba(0,0,0,0.05);
-        ">
+        <div class="warum-card">
 
             <h3>
                 📍 Top Lage
             </h3>
 
-            <p style="color:#555;">
+            <p>
                 Strand, Hafen, Restaurants und
                 Einkaufsmöglichkeiten befinden sich
                 nur wenige Gehminuten entfernt.
@@ -1091,18 +1465,13 @@
         </div>
 
 
-        <div style="
-            background:white;
-            padding:28px;
-            border-radius:14px;
-            box-shadow:0 4px 15px rgba(0,0,0,0.05);
-        ">
+        <div class="warum-card">
 
             <h3>
                 🏡 Großzügig & privat
             </h3>
 
-            <p style="color:#555;">
+            <p>
                 Die komplette Wohnung bietet zwei Schlafzimmer,
                 zwei Badezimmer und viel Raum für bis zu vier Personen.
             </p>
@@ -1110,18 +1479,13 @@
         </div>
 
 
-        <div style="
-            background:white;
-            padding:28px;
-            border-radius:14px;
-            box-shadow:0 4px 15px rgba(0,0,0,0.05);
-        ">
+        <div class="warum-card">
 
             <h3>
                 ☀️ Entspannen
             </h3>
 
-            <p style="color:#555;">
+            <p>
                 Die große private Sonnenterrasse und der Balkon
                 laden zum Abschalten und Genießen ein.
             </p>
@@ -1129,18 +1493,13 @@
         </div>
 
 
-        <div style="
-            background:white;
-            padding:28px;
-            border-radius:14px;
-            box-shadow:0 4px 15px rgba(0,0,0,0.05);
-        ">
+        <div class="warum-card">
 
             <h3>
                 💻 Komfort
             </h3>
 
-            <p style="color:#555;">
+            <p>
                 WLAN, Klimaanlagen, voll ausgestattete Küche
                 und Waschmaschine sorgen für einen unkomplizierten Aufenthalt.
             </p>
@@ -1150,35 +1509,22 @@
     </div>
 
 
-    <p style="
-        max-width:700px;
-        margin:40px auto 0 auto;
-        font-size:17px;
-        color:#555;
-    ">
+    <p class="warum-ziel">
         <strong>Unser Ziel:</strong>
         Du sollst dich vom ersten Moment an wohlfühlen
         und deinen Aufenthalt auf Mallorca entspannt genießen.
     </p>
 
-</div>
+</section>
 
 
 <!-- =========================
      KONTAKT
 ========================= -->
 
-<div style="
-    background:#1e1e1e;
-    color:white;
-    padding:40px;
-    text-align:center;
-">
+<footer class="kontakt">
 
-    <h2 style="
-        font-size:28px;
-        margin-bottom:20px;
-    ">
+    <h2>
         Kontakt
     </h2>
 
@@ -1186,145 +1532,30 @@
         📲 WhatsApp bevorzugt für schnelle Anfragen
     </p>
 
-    <p style="
-        opacity:0.8;
-        font-size:14px;
-    ">
+    <p class="kontakt-email">
         Email auf Anfrage verfügbar
     </p>
 
-</div>
+</footer>
 
 
 <!-- =========================
      WHATSAPP BUTTON
 ========================= -->
 
-<a href="https://wa.me/4367763936640?text=Hallo%2C%20ich%20interessiere%20mich%20für%20die%20Ferienwohnung%20bzw.%20Zimmervermietung%20in%20Porto%20Cristo"
-   style="
-   position:fixed;
-   bottom:20px;
-   right:20px;
-   background:#25D366;
-   color:white;
-   padding:14px 18px;
-   border-radius:50px;
-   font-size:15px;
-   font-weight:bold;
-   text-decoration:none;
-   box-shadow:0 6px 18px rgba(0,0,0,0.25);
-   z-index:9999;
-   display:flex;
-   align-items:center;
-   gap:8px;
-   animation:pulse 2.5s infinite;
-   ">
+<a
+    href="https://wa.me/4367763936640?text=Hallo%2C%20ich%20interessiere%20mich%20für%20die%20Ferienwohnung%20bzw.%20Zimmervermietung%20in%20Porto%20Cristo"
+    class="whatsapp-button"
+    aria-label="WhatsApp Kontakt">
 
     📲 WhatsApp
 
-    <span style="
-        font-size:12px;
-        opacity:0.9;
-    ">
+    <small>
         Antwort meist &lt;1h
-    </span>
+    </small>
 
 </a>
 
-
-<!-- =========================
-     STYLE
-========================= -->
-
-<style>
-
-@keyframes pulse {
-
-    0% {
-        transform:scale(1);
-    }
-
-    50% {
-        transform:scale(1.05);
-    }
-
-    100% {
-        transform:scale(1);
-    }
-
-}
-
-h1 {
-    font-size:42px;
-    margin:0;
-}
-
-h2 {
-    font-size:28px;
-    margin-bottom:20px;
-    letter-spacing:0.3px;
-}
-
-h3 {
-    font-size:19px;
-    margin-bottom:10px;
-}
-
-
-@media (max-width:768px) {
-
-    .hero {
-        height:60vh !important;
-    }
-
-    h1 {
-        font-size:32px !important;
-        line-height:1.2;
-    }
-
-    h2 {
-        font-size:22px !important;
-        line-height:1.3;
-        margin-bottom:15px !important;
-    }
-
-    h3 {
-        font-size:16px !important;
-        line-height:1.3;
-    }
-
-    .hero p {
-        font-size:16px !important;
-    }
-
-    div[style*="max-width"] {
-        padding-left:20px !important;
-        padding-right:20px !important;
-    }
-
-    div[style*="grid-template-columns"] {
-        grid-template-columns:1fr !important;
-    }
-
-    table {
-        font-size:14px !important;
-    }
-
-    .hero a {
-        display:inline-block;
-        margin:5px !important;
-    }
-
-    .box {
-        background:#fffaf3;
-        border-radius:16px;
-        box-shadow:0 12px 35px rgba(0,0,0,0.08);
-        border:1px solid rgba(0,0,0,0.04);
-    }
-
-}
-
-</style>
 
 </body>
 </html>
